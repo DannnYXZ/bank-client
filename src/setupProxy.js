@@ -1,10 +1,11 @@
 const {createProxyMiddleware} = require('http-proxy-middleware');
+const BANK_SERVICE_BASE_URL = process.env.BANK_SERVICE_BASE_URL;
 
 module.exports = function (app) {
     app.use(
         '/bank',
         createProxyMiddleware({
-            target: 'http://localhost:8080/',
+            target: BANK_SERVICE_BASE_URL,
             changeOrigin: true,
         })
     );
