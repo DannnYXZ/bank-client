@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  bank-client:
+    image: bank-client:latest
+    environment:
+      - "BANK_SERVICE_BASE_URL=http://bank-service:8080"
+    networks:
+      - cross-comms
+    ports:
+      - "3000:3000"
+networks:
+  cross-comms:
+    external:
+      name: "cross-comms"

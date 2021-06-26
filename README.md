@@ -1,3 +1,7 @@
+# Build docker image
+`docker build -t bank-client:latest .`
+`docker network create cross-comms`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
