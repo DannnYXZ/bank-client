@@ -4,6 +4,8 @@ steps:
     args: [ 'install' ]
   - name: node:14.10.0
     entrypoint: npm
+    env:
+      - 'CI=true'
     args: [ 'test' ]
   - name: 'gcr.io/cloud-builders/docker'
     args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/$_APP_NAME', '.' ]
