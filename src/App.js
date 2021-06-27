@@ -15,7 +15,7 @@ function App() {
                 <header className="App-header">
                     <Switch>
                         <Route path="/clients/:clientId" component={ClientForm}/>
-                        <Route path="/clients" component={ClientsViewer}/>
+                        <Route path="/" component={ClientsViewer}/>
                     </Switch>
                 </header>
             </div>
